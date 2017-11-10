@@ -7,14 +7,67 @@ package interfaces;
 import javax.swing.*;
 import java.awt.*;
 //PASO 14 - IMPORTAR LA CLASE CONEXION
-import bd.ConexionBD;
+import bd2.ConexionBD;
 import java.sql.Connection;
 import java.awt.event.*;
 
 /**
- *
+ * Claudia Millan Lopez
  * @author lab12
+ * Fecha: 10 de Noviembre de 2017
+ * Programa: PruebaJava3
+ * Responsabilidad: Conexion de Escritorio
  */
-public class Interfaz {
+public class Interfaz extends JFrame 
+{
+ JPanel panel;
+ JLabel label;
+ JTextField text;
+ JButton boton;
+ JButton boton2;
+ 
+ //PASO 15 - Creacion de un objeto tipo ConexionBD
+ ConexionBD con;
+ 
+ public Interfaz() 
+ {
+     panel = new JPanel();
+     label = new JLabel();
+     text = new JTextField(20);
+     boton = new JButton();
+     boton2 = new JButton();
+     
+     this.add(panel);
+     panel.add(label);
+     panel.add(text);
+     panel.add(boton);
+     panel.add(boton2);
+     
+     label.setText("Atributo");
+     boton.setText("Conectar");
+     boton2.setText("Desconectar");
+     panel.setBackground(Color.blue);
+     
+     //PASO 16 - AGREGRAMOS ESCUCHADORES AL BOTON
+     boton.addActionListener(new ActionListener()
+    {
+        public void actionPerformed(ActionEvent evt)
+     {
+         com = new ConexionBD();
+         Connection reg = con.conectar();
+     }    
+          
+    });
     
-}
+     boton2.addActionListener(new ActionListener()
+    {
+        public void actionPerformed(ActionEvent evt)
+     {
+        con.desconectar();
+     }    
+          
+    });
+ 
+ }
+ 
+ }
