@@ -6,7 +6,7 @@
 package interfaces;
 import javax.swing.*;
 import java.awt.*;
-//PASO 14 - IMPORTAR LA CLASE CONEXION
+//IMPORTAR LA CLASE CONEXION
 import bd2.ConexionBD;
 import java.sql.Connection;
 import java.awt.event.*;
@@ -26,14 +26,14 @@ public class Interfaz extends JFrame
  JButton boton;
  JButton boton2;
  
- //PASO 15 - Creacion de un objeto tipo ConexionBD
+ //Creacion de un objeto tipo ConexionBD
  ConexionBD con;
  
  public Interfaz() 
  {
      panel = new JPanel();
      label = new JLabel();
-     text = new JTextField(20);
+     text = new JTextField(40);
      boton = new JButton();
      boton2 = new JButton();
      
@@ -46,14 +46,14 @@ public class Interfaz extends JFrame
      label.setText("Atributo");
      boton.setText("Conectar");
      boton2.setText("Desconectar");
-     panel.setBackground(Color.blue);
+     panel.setBackground(Color.pink);
      
-     //PASO 16 - AGREGRAMOS ESCUCHADORES AL BOTON
+     //AGREGRAMOS ESCUCHADORES AL BOTON
      boton.addActionListener(new ActionListener()
     {
         public void actionPerformed(ActionEvent evt)
      {
-         com = new ConexionBD();
+         ConexionBD con = new ConexionBD();
          Connection reg = con.conectar();
      }    
           
