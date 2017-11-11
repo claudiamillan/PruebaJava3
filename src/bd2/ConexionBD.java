@@ -18,14 +18,14 @@ import java.sql.SQLException;
  */
 public class ConexionBD 
 {
-    //PASO 11 - DECLARANDO OBJETOS PARA LA CONEXION
+    //DECLARANDO OBJETOS PARA LA CONEXION
     private static Connection conex;//Objeto tipo Connection
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String USER = "root";
     private static final String PASS = "";
     private static final String URL = "jdbc:mysql://localhost:3336/PruebaJava3";
     
-    //PASO 12 - COSTRUCTOR DE LA CLASE
+    //COSTRUCTOR DE LA CLASE
     public ConexionBD()
     {
         conex = null;//Inicializar la variable 
@@ -46,7 +46,7 @@ public class ConexionBD
         }
     }
     
-    //PASO 13 - DEFINICION METODOS PARA CONECTAR Y DESCONECTAR
+    //DEFINICION METODOS PARA CONECTAR Y DESCONECTAR
     public Connection conectar()
     {
         return conex;//Retorna el objeto conex  
