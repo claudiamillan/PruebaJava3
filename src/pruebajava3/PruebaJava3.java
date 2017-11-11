@@ -24,6 +24,7 @@ public class PruebaJava3
    
       Interfaz w = new Interfaz();
       w.setVisible(true);
+      w.setTitle("Tercera Evaluacion Sumativa");
       w.setBounds(0, 0, 500, 0x1f4);
       w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       
